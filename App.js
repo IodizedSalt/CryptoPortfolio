@@ -18,6 +18,9 @@ import {
   View,
 } from 'react-native';
 
+import CryptoBlob from './src/components/cryptoblob/CryptoBlob.js'
+import PortfolioValue from './src/components/portfoliovalue/PortfolioValue.js'
+
 import {
   Colors,
   DebugInstructions,
@@ -113,20 +116,14 @@ import {
 //    fontWeight: '700',
 //  },
 //});
-const ViewBoxesWithColorAndText = () => {
+const App = () => {
   return (
-    <View
-      style={{
-        flexDirection: "row",
-        height: 100,
-        padding: 20
-      }}
-    >
-      <View style={{ backgroundColor: "blue", flex: 0.3 }} />
-      <View style={{ backgroundColor: "red", flex: 0.5 }} />
-      <Text>Hello World!</Text>
+    <View>
+        <PortfolioValue />
+        <CryptoBlob />
     </View>
+
   );
 };
-export default ViewBoxesWithColorAndText;
+export default App;
 //export default App;
